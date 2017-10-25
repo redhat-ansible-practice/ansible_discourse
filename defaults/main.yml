@@ -1,0 +1,4 @@
+---
+#git url to pull discourse docker
+discourse_docker_repo: 'git@github.com:discourse/discourse.git'
+discourse_deb: curl,apt-transport-https,ca-certificates,"linux-image-extra-$(uname -r)",linux-image-extra-virtual,libpam-cracklib,fail2ban,ntp,ufw
