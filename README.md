@@ -1,7 +1,7 @@
 Role Name
 =========
 
-This role installs all the required debs and downloads discourse.
+This role installs discourse.
 
 Requirements
 ------------
