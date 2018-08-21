@@ -1,8 +1,4 @@
 ---
-  - name: Update the system before anything
-    apt:
-      name: "*"
-      state: latest
 
   - name: install all the required Packages
     apt: 
@@ -24,19 +20,6 @@
 #  - name: Add to crontab
 #    cron: hour= job=
 
-#  - name: Install the Repository for Docker and add apt key
-  - apt_key:
-    url: https://apt.dockerproject.org/gpg
-
-  - apt_repository:
-     repo: deb https://apt.dockerproject.org/repo/dists/ubuntu-xenial/main/
-     state: present
-
-  - name: install docker-engine
-    apt:
-      name: docker-engine
-      state: present
-
   - file:
       path: /var/discourse
       state: directory
@@ -48,10 +31,3 @@
       dest: /var/discourse
       clone: yes
 
-  #- name: copy the config file
-  #  copy:
-  #    src: "{{ item.src }}"
-  #    dest: "{{ item.dest }}"
-  #    owner: root
-  #    group: root
-  #    mode: 0644
