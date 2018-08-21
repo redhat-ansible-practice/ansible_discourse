@@ -26,7 +26,7 @@ Including an example of how to use your role (for instance, with variables passe
 License
 -------
 
-Apache
+GPLv3
 
 Author Information
 ------------------
