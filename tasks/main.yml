@@ -2,25 +2,11 @@
 
   - name: install all the required Packages
     apt: 
-    name: "{{ discourse_debs }}" 
-    state: present
-
-  - name: Ensure NTP is running
-    service: 
-    name: ntpd 
-    state: started 
-    enabled: yes
-
-  - name: Ensute UFW is running
-    service: 
-    name: ufw 
-    state: started 
-    enabled: yes
-
-#  - name: Add to crontab
-#    cron: hour= job=
-
-  - file:
+      name: "{{ discourse_debs }}" 
+      state: installed
+    
+  - name: Create the discourse directory
+    file:
       path: /var/discourse
       state: directory
       owner: root

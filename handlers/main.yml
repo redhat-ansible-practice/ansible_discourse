@@ -1,2 +1,15 @@
 ---
 # handlers file for discourse
+
+  - name: Ensure NTP is running
+    service: 
+    name: ntpd
+    state: started
+    enabled: yes
+
+  - name: Ensute UFW is running
+    service: 
+    name: ufw
+    state: started
+    enabled: yes
+
